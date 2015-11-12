@@ -70,5 +70,5 @@ theme: jacman
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: heroku
-  repo: git@heroku.com:vast-sands-6415.git
+  repo: git@heroku.com:mcc863.git
   message: deploy from hexo 
