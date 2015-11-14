@@ -1,8 +1,4 @@
-title: 设置hexo
-category: 未分类
-date: 2015-11-14
-tags: [hexo]
-author: Ying
+## 设置hexo
 ---
 
 ## 简介
