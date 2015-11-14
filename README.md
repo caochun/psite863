@@ -1,12 +1,10 @@
 ## 设置hexo
----
 
 ## 简介
 [hexo](http://hexo.io/)是一个基于[Node.js](https://nodejs.org/en/)的博客生成工具。它把 Markdown 格式的博客文章(post)转换成一个静态的html博客网站，不仅生成post正文页面，还生成了 博客首页的列表，分类，tags等页面。
 hexo有多种博客主题可选，这里使用了 jacman 主题。
 
 [heroku](http://heroku.com)是一个流行的PaaS服务商，我们的网站就放在了heroku上。
-
 
 ## 安装程序
 
@@ -44,6 +42,7 @@ $ cd  ~
 $ git clone git@github.com:caochun/psite863.git
 $ cd psite863
 $ tar axf node_modules.tar.gz 
+$ tar axf themes.tar.gz 
 ```
 
 ## 撰写文章
@@ -57,7 +56,8 @@ $ hexo n "New Post" # new
 
 ## 发布文章
 
-发布时需要执行**2个**步骤，即 
+发布文章需要执行*2个*步骤：
+
 1) 同步源文件到github
 ```
 $ git add -A
