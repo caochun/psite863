@@ -1,0 +1,429 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>会议纪要-2015年11月12日-上海 | 云端融合</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Chun">
+    
+
+    
+    <link rel="alternative" href="/atom.xml" title="云端融合" type="application/atom+xml">
+    
+    
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="云端融合">云端融合</a></h1>
+				<h2 class="blog-motto">国家863计划课题2015AA01A203</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/atom.xml">RSS</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:mcc863.herokuapp.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/11/13/meeting-shanghai/" title="会议纪要-2015年11月12日-上海" itemprop="url">会议纪要-2015年11月12日-上海</a>
+  </h1>
+  <p class="article-author">By
+    
+        Chun
+	
+  <p class="article-time">
+    <time datetime="2015-11-13T14:09:26.000Z" itemprop="datePublished"> 发表于 2015-11-13</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#主要技术研讨内容"><span class="toc-number">1.</span> <span class="toc-text">主要技术研讨内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下一步工作安排"><span class="toc-number">2.</span> <span class="toc-text">下一步工作安排</span></a></li></ol>
+		
+		</div>
+		
+		<p>2015年11月12日-13日，国家863计划课题 “云端和终端资源自适应与协同调度平台”在复旦大学张江校区召开研讨会。成员单位北京大学、南京大学、华中科技大学、复旦大学和苍穹数码测绘有限公司的课题负责人和研究骨干共计20余名人员参会。</p>
+<p><img src="/meeting-shanghai.jpg" alt="上海会议"></p>
+<a id="more"></a>
+<hr>
+<h2 id="主要技术研讨内容">主要技术研讨内容</h2><p>北京大学的马郓对优化移动Web的相关工作进行了介绍。<br>移动Web应用相比移动原生应用而言，其体验较差。主要有两个方面的原因：在功能上，移动Web应用的UI的适应、触屏交互、对设备的传感器等使用不好、对网络依赖较较高；在非功能上：其加载时间较长，进行交互时延迟较大，对网络流量消耗大，电量消耗大。马郓随后介绍移动Web应用在资源加载上的一些瓶颈，如Cache配置低效，资源加载并行程度低等。最后马郓提出了两个利用计算能力强大的云资源来加速Web应用资源加载的解决方案。<br>第一个解决方案是SWAORVski，利用在云上布署的智能资源代理，通过代理构建出Web应用资源加载的依赖和资源过期的知识，从而指导在智能终端在资源加载上的策略。<br>第二个解决方案是ReWAP，利用HTML5的AppCache和在云上布署的轻量级代理，Web应用开发人员可以方便地实现流量友好型Web应用。</p>
+<p>南京大学的陆子凌介绍了智能手机应用的能耗相关的研究。<br>随着智能手机的市场越来越大，而应用其耗电量也越来越大，电池容量已经成为智能手机的瓶颈。这方面的相关工作可分为以下几类：<br>一是能耗模型：有的对CPU\GPU\Radio等硬件进行软件建模。利用运行时的一些电流、电压等传感器信息，结合能耗模型给出当前手机各个部分的耗电情况。这些工作都是针对整个手机的，难以估计每个应用的能耗。另一些工作则是针对应用的字节码进行分析，根据应用字节码产生相应执行路径，从而统计每条字节码的耗电。<br>二是能耗BUG的检测。<br>第一个相关工作是从社区上收集有相能耗漏洞。随后有工作利用静态程序分析技术对某些特定的能耗漏洞进行检测，如未释放wakelock，未注销GPS listener等。还有一些工作是根据在使用应用时的能量，找出能耗漏洞。最后是降低应用能耗的相关工作。有些工作是是降低某些应用场景下的应用能耗费。如GPS，Wifi。还有些工作是通过实例研究来验证一些减少能耗的编程实践。<br>南京大学将会在移动应用的能耗上进行相关研究。其中一个研究点是在低电量模式下相机渲染的优化，以及如何利用字节码重构技术优化相对耗电的系统调用。</p>
+<p>复旦大学的彭鑫介绍了他们当前的三个工作方向：<br>一是延续上次讨论的人机物混合服务组合MobiGoal。近几个月来，已经围绕校园生活，集成现实中的API，开成实用化的应用。接下来在这个方向的工作是将一些硬件服务化，形成相应的服务，以丰富MobiGoal的实用场景；以及结合用户数据、社交平台等实现MobiGoal的需求学习和自演化。<br>二是面向终端应用的优化<br>静态重构，界面重构，设计重构：探索适于安卓编程框架的设计结构。通过优化类和方法级的设计提高安卓应用的运行效率。思考：什么样的软件设计能够更好适应云端融合环境。调研“让软件运行一百年”。运行时自适应：基于HTML5的安卓应用自适应：数据缓存策略、传感器数据 使用方式、网络访问方式等。<br>三是面向云平台的自优化和自保护</p>
+<p>最后，由华中科大的戴小海介绍了云端融合背景下的移动边缘计算。这项工作主要针对云端的环境。</p>
+<h2 id="下一步工作安排">下一步工作安排</h2>  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/meeting/">meeting</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://mcc863.herokuapp.com/2015/11/13/meeting-shanghai/" data-title="会议纪要-2015年11月12日-上海 | 云端融合" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/09/09/meeting-nanjing/"  title="会议纪要-2015年9月8日-南京">
+ <strong>下一篇：</strong><br/> 
+ <span>会议纪要-2015年9月8日-南京
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#主要技术研讨内容"><span class="toc-number">1.</span> <span class="toc-text">主要技术研讨内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下一步工作安排"><span class="toc-number">2.</span> <span class="toc-text">下一步工作安排</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/meeting/" title="meeting">meeting<sup>2</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://www.pku.edu.cn" target="_blank" title="北京大学">北京大学</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.nju.edu.cn" target="_blank" title="南京大学">南京大学</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.fdu.edu.cn" target="_blank" title="复旦大学">复旦大学</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.hust.edu.cn/" target="_blank" title="华中科技大学">华中科技大学</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.kanq.com.cn/" target="_blank" title="苍穹数码">苍穹数码</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	<p class="copyright">
+        &nbsp; <br/>
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015. Hosted on <a href="https://github.com/caochun/psite863" target="_blank" title="Github repo">Github</a>
+	</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
