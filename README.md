@@ -57,6 +57,7 @@ $ hexo n "New Post" # new
 ## 发布文章
 
 发布文章需要执行*2个*步骤：
+
 1) 发布到 heroku
 ```
 $ hexo d -g
