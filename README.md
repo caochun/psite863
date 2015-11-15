@@ -57,19 +57,18 @@ $ hexo n "New Post" # new
 ## 发布文章
 
 发布文章需要执行*2个*步骤：
+1) 发布到 heroku
+```
+$ hexo d -g
+```
 
-1) 同步源文件到github
+2) 同步源文件到github
 ```
 $ git add -A
 $ git commit -m "update"
 
 $ git pull origin master
 $ git push origin master
-```
-
-2) 发布到 heroku
-```
-$ hexo d -g
 ```
 
 ## 补充说明
