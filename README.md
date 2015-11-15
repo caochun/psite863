@@ -110,7 +110,7 @@ $ hexo d -g  # 依次执行生成和部署
 ### psite863目录内容
 
 | 文件/目录       |       说明     |
-|--|--| 
+| ------------- | ------------- |
 | `_config.yml`   | 博客的配置文件 |
 | `.deploy_git/`  | 用于push到Github、heroku等的git仓库，里面有与`public/`相同的内容及`.git`的记录 |
 | `public/`       | 生成的完整的静态html网站，执行 `hexo clean` 会清除此文件夹 |
