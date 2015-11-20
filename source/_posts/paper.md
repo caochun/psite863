@@ -9,7 +9,7 @@ tags: paper
 
 ## 北京大学
 
-[1]. 黄罡，刘譞哲，张颖: [面向云-端融合的移动互联网应用运行平台.](http://www.sciencemeta.com/index.php/zgkxxxkxcn/article/view/8404) 中国科学: [信息科学. 43(1): 24-44 (2013)
+[1]. 黄罡，刘譞哲，张颖: [面向云-端融合的移动互联网应用运行平台.](http://www.sciencemeta.com/index.php/zgkxxxkxcn/article/view/8404) 中国科学: 信息科学. 43(1): 24-44 (2013)
 [2]. Ying Zhang, Gang Huang, Xuanzhe Liu, Wei Zhang, Hong Mei and Shunxiang Yang: [Refactoring android Java code for on-demand computation offloading.](http://dl.acm.org/citation.cfm?id=2384634) OOPSLA. 233-248 (2012) 
 [3]. Gang Huang, Yun Ma, Xuanzhe Liu, Yuchong Luo, Xuan Lu and M. Brian Blake: [Model-Based Automated Navigation and Composition of Complex Service Mashups.](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6877685) IEEE Transactions on Services Computing. 8(3): 494-506 (2015)
 [4]. Xuanzhe Liu, Yun Ma, Gang Huang, Junfeng Zhao, Hong Mei and Yunxin Liu: [Data-Driven Composition for Service-Oriented Situational Web Applications.](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6732962) IEEE Transactions on Services Computing. 8(1): 2-16 (2015)
