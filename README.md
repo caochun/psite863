@@ -8,7 +8,7 @@ hexo有多种博客主题可选，这里使用了 jacman 主题。
 
 ## 安装程序
 
-下面的设置过程是在Ubuntu 14.04上进行的。
+下面的设置过程是在Ubuntu 16.04上进行的。
 ### 安装git
 ```
 $ sudo apt-get install git
@@ -19,17 +19,7 @@ $ git config --global user.email "your@email.com"
 ```
 
 ### 安装node.js
-直接使用二进制包
-```
-$ cd ~
-$ wget https://nodejs.org/download/release/v4.2.2/node-v4.2.2-linux-x64.tar.gz
-
-$ tar axf node-v4.2.2-linux-x64.tar.gz
-$ cd node-v4.2.2-linux-x64/
-$ sudo cp -r ./ /usr/local/     # 安装到/usr/local/
-$ cd ..
-$ rm -rf node-v4.2.2-linux-x64/
-```
+直接使用[https://nodejs.org]提供的二进制包。
 
 ### 安装hexo
 ```
@@ -41,8 +31,8 @@ $ sudo npm install hexo-cli -g
 $ cd  ~
 $ git clone git@github.com:caochun/psite863.git
 $ cd psite863
-$ tar axf node_modules.tar.gz 
-$ tar axf themes.tar.gz 
+$ 7z x node_modules.7z 
+$ 7z x themes.7z
 ```
 
 ## 撰写文章
