@@ -6,4 +6,3 @@ db.json
 node_modules/
 public
 !.deploy_heroku/package.json
-.deploy*/
