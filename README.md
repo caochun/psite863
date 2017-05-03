@@ -1,4 +1,21 @@
-## 设置hexo
+# 处理无法通过hexo插件deploy到heroku的问题
+@2017-5-4
+
+首先需要下载heroku的cli工具，参考[https://devcenter.heroku.com/articles/heroku-cli]。安装后需执行`heroku login`，输入email和密码登录。
+克隆本项目（psite863），编辑文章，然后执行`hexo d`，在`psite863/public`目录生成新的静态页，手工将`psite863/public`目录下的文件都拷贝到`psite863/.deploy_heroku`
+
+在`psite863/.deploy_heroku`目录下[执行git命令手动部署](https://dashboard.heroku.com/apps/mcc863/deploy/heroku-git)：
+```
+git remote add heroku https://git.heroku.com/mcc863.git # 或 git@heroku.com:mcc863.git
+git add .
+git status 
+git commit -m "x"
+git push heroku master -f
+```
+
+> `psite863/.deploy_heroku/package.json`文件是将静态页伪装成一个nodejs项目，才能触发heroku的build操作。在heroku无法直接更新静态页。
+
+# 设置hexo
 
 ## 简介
 [hexo](http://hexo.io/)是一个基于[Node.js](https://nodejs.org/en/)的博客生成工具。它把 Markdown 格式的博客文章(post)转换成一个静态的html博客网站，不仅生成post正文页面，还生成了 博客首页的列表，分类，tags等页面。
@@ -62,7 +79,7 @@ $ git pull origin master
 $ git push origin master
 ```
 
-## 补充说明
+## 其它
 
 ### `scaffold/post.md`模板
 增加了catagory，tags，及摘要和正文的分割线`<!--more-->`。
