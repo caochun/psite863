@@ -1,19 +1,21 @@
 # 处理无法通过hexo插件deploy到heroku的问题
 @2017-5-4
 
-首先需要下载heroku的cli工具，参考[https://devcenter.heroku.com/articles/heroku-cli]。安装后需执行`heroku login`，输入email和密码登录。
-克隆本项目（psite863），编辑文章，然后执行`hexo d`，在`psite863/public`目录生成新的静态页，手工将`psite863/public`目录下的文件都拷贝到`psite863/.deploy_heroku`
+首先需要[下载并安装heroku的cli工具](https://devcenter.heroku.com/articles/heroku-cli) 。
+安装后需执行`heroku login`，输入email和密码登录到heroku。（虽然已经在heroku配置了ssh key，但在hexo d阶段提示登录错误）
+克隆本项目（psite863），编辑文章，然后执行`hexo g`，在`psite863/.deploy_heroku/public`目录生成新的静态页面。 
 
 在`psite863/.deploy_heroku`目录下[执行git命令手动部署](https://dashboard.heroku.com/apps/mcc863/deploy/heroku-git)：
 ```
-git remote add heroku https://git.heroku.com/mcc863.git # 或 git@heroku.com:mcc863.git
+git init
+git remote add heroku https://git.heroku.com/mcc863.git
 git add .
-git status 
 git commit -m "x"
 git push heroku master -f
 ```
 
-> `psite863/.deploy_heroku/package.json`文件是将静态页伪装成一个nodejs项目，才能触发heroku的build操作。在heroku无法直接更新静态页。
+> `psite863/.deploy_heroku/package.json`文件将静态页伪装成一个nodejs项目，这样才能触发heroku的build操作。
+在heroku无法直接部署和更新静态站点。
 
 # 设置hexo
 
@@ -28,11 +30,11 @@ hexo有多种博客主题可选，这里使用了 jacman 主题。
 下面的设置过程是在Ubuntu 16.04上进行的。
 ### 安装git
 ```
-$ sudo apt-get install git
+sudo apt-get install git
 
 # 配置 git 的用户名，Email，git默认使用`~/.ssh`下的 key
-$ git config --global user.name "Your Name"
-$ git config --global user.email "your@email.com"
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
 ```
 
 ### 安装node.js
@@ -40,23 +42,25 @@ $ git config --global user.email "your@email.com"
 
 ### 安装hexo
 ```
-$ sudo npm install hexo-cli -g 
+sudo npm install hexo-cli -g 
 ```
 
 ## 克隆博客repo
 ```
-$ cd  ~
-$ git clone git@github.com:caochun/psite863.git
-$ cd psite863
-$ 7z x node_modules.7z 
-$ 7z x themes.7z
+cd  ~
+git clone git@github.com:caochun/psite863.git
+cd psite863
+7z x node_modules.7z 
+7z x themes.7z
 ```
+
+>如果不能正确生成熔丝，则需安装`npm install hexo-generator-feed --save`。
 
 ## 撰写文章
 
 执行下面的命令，在`source/_posts/`下生成名为 `New-Post.md` 的文件。新文章的模板是`scaffolds/post.md`，模板的格式请见下面的补充说明。
 ```
-$ hexo n "New Post" # new
+hexo n "New Post" # new
 ```
 
 更多可参考[使用hexo写作](http://hexo.io/docs/writing.html)的说明文档 和 [Markdown Cheatsheet](http://www.bagtheweb.com/b/xjmOex)。
@@ -67,16 +71,16 @@ $ hexo n "New Post" # new
 
 1) 发布到 heroku
 ```
-$ hexo d -g
+hexo d -g
 ```
 
 2) 同步源文件到github
 ```
-$ git add -A
-$ git commit -m "update"
+git add -A
+git commit -m "update"
 
-$ git pull origin master
-$ git push origin master
+git pull origin master
+git push origin master
 ```
 
 ## 其它
@@ -103,15 +107,15 @@ tags: [tag1, tag2]
 
 ### hexo 常用命令
 ```
-$ hexo g     # generate 生成静态html
-$ hexo s     # server   本地预览，默认地址在http://localhost:4000。
-             # 编辑了post后，不必重新运行该命令，刷新一下页面就会更新编辑的结果。直到按Ctrl + C才会退出。
-$ hexo clean # 删除 public/ 文件夹下所有内容
+hexo g     # generate 生成静态html
+hexo s     # server   本地预览，默认地址在http://localhost:4000。
+           # 编辑了post后，不必重新运行该命令，刷新一下页面就会更新编辑的结果。直到按Ctrl + C才会退出。
+hexo clean # 删除 public/ 文件夹下所有内容
 
-$ hexo d     # deploy   部署整个网站到heroku
+hexo d     # deploy   部署整个网站到heroku
 
-$ hexo s -g  # 依次执行生成和本地预览
-$ hexo d -g  # 依次执行生成和部署
+hexo s -g  # 依次执行生成和本地预览
+hexo d -g  # 依次执行生成和部署
 ```
 
 ### psite863目录内容
